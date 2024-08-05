@@ -18,7 +18,9 @@ namespace PostLand.Application.Features.Posts.Commands.CreatePost
 
         public async Task<Unit> Handle(DeletePostCommand request, CancellationToken cancellationToken)
         {
-            var post = await _postRepository.GetByIdAsync(request.PostId);
+
+            var post = _mapper.Map<Post>(request);
+
             await _postRepository.DeleteAsync(post);
             return Unit.Value;
         }

@@ -14,6 +14,7 @@ namespace PostLand.Application.Profiles
             CreateMap<Post, CreatePostCommand>().ReverseMap();
             CreateMap<Post, UpdatePostCommand>().ReverseMap();
             CreateMap<Post, DeletePostCommand>().ReverseMap();
+
             CreateMap<Category, CategoryDto>().ReverseMap();
 
         }

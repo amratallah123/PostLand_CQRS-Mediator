@@ -10,7 +10,7 @@ namespace PostLand.Application.Features.Posts.Commands.CreatePost
 {
     public class DeletePostCommand : IRequest<Unit>
     {
-        public Guid PostId { get; set; }
+        public Guid Id { get; set; }
 
     }
 }

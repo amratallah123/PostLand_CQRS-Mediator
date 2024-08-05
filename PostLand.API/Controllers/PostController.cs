@@ -64,7 +64,7 @@ namespace PostLand.API.Controllers
             [HttpDelete("{id}")]
             public async Task<IActionResult> DeletePost(Guid id)
             {
-                var deletePostCommand = new DeletePostCommand() { PostId = id };
+                var deletePostCommand = new DeletePostCommand() { Id = id };
                 var post = await _mediator.Send(deletePostCommand);
 
                 return NoContent();
